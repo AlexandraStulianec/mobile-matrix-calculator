@@ -1,0 +1,13 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:padding="16dp"
+        android:text="                            Example:\nTo apply Sarrus' rule, take the sum of the products of the diagonals from the upper left to the lower right, then subtract the sum of the products of the diagonals from the lower left to the upper right.\n\nConsider matrix B:\n          [2, 3, 1]\n   B = [4, 5, 6]\n          [7, 8, 9]\n\nUsing Sarrus' rule, det(B) is calculated as follows:\n\n(2*5*9 + 3*6*7 + 1*4*8) - (1*5*7 + 2*6*8 + 3*4*9) = 90 + 126 + 32 - (35 + 96 + 108) = 248 - 239 = 9\n\nThus, det(B) = 9, indicating B has an inverse." />
+
+</ScrollView>

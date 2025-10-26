@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/quiz_layout"
+    android:padding="16dp"
+    tools:context=".QuizActivity">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#008080"
+        android:padding="5dp"
+        android:text="QUIZ"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/question1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. What is the determinant of matrix A if \n\nA = [1, 2, 3] \n       [3, 4, 5] \n       [4, 2, 9]"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <RadioGroup
+                android:id="@+id/answers_group1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/answer1_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="27dp"
+                    android:text="-18" />
+
+                <RadioButton
+                    android:id="@+id/answer1_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="27dp"
+                    android:text="2" />
+
+                <RadioButton
+                    android:id="@+id/answer1_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:text="0" />
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/question2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. What is the product of matrix A and B if \n\n             [1, 0, 2]                  [2, 1, 1] \n     A =  [0, 2, 1]  and   B = [1, 0, 2]\n             [1, 1, 1]                  [1, 1, 0]"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <RadioGroup
+                android:id="@+id/answers_group2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/answer2_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="[4, 3, 1] \n[3, 2, 2]\n[4, 2, 3]" />
+
+                <RadioButton
+                    android:id="@+id/answer2_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="[4, 1, 2] \n[3, 2, 0]\n[4, 2, 3]" />
+
+                <RadioButton
+                    android:id="@+id/answer2_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="[4, 1, 2] \n[3, 2, 4]\n[4, 2, 3]" />
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/question3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. What is the trace of matrix A if \n\nA = [4, 2, 3, 1] \n       [3, 3, 5, 2] \n       [4, 2, 9, 0]\n       [2, 0, 0, 5]"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <RadioGroup
+                android:id="@+id/answers_group3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/answer3_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="23" />
+
+                <RadioButton
+                    android:id="@+id/answer3_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="29dp"
+                    android:text="21" />
+
+                <RadioButton
+                    android:id="@+id/answer3_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="26dp"
+                    android:text="0" />
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/question4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4. What is the transpose of matrix A if \n\n             [1, 2, 3]\n     A =  [4, 5, 6]\n             [7, 8, 9]"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <RadioGroup
+                android:id="@+id/answers_group4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/answer4_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="[1, 4, 7] \n[2, 5, 8]\n[3, 6, 9]" />
+
+                <RadioButton
+                    android:id="@+id/answer4_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="[1, 2, 3] \n[4, 5, 6]\n[7, 8, 9]" />
+
+                <RadioButton
+                    android:id="@+id/answer4_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="[1, 3, 7] \n[2, 5, 8]\n[4, 6, 9]" />
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/question5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5. Which statement is true about the multiplication of two matrices, F (3x4) and G (4x3)?"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <RadioGroup
+                android:id="@+id/answers_group5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/answer5_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:text="The product FG is undefined because the matrices do not have compatible dimensions." />
+
+                <RadioButton
+                    android:id="@+id/answer5_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:text="The product FG will result in a matrix of dimensions 3x3." />
+
+                <RadioButton
+                    android:id="@+id/answer5_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:text="The product FG will result in a matrix of dimensions 4x4." />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/submit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:paddingTop="16dp">
+
+        <!-- New Button for MainActivity -->
+        <Button
+            android:id="@+id/buttonMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main"
+            android:onClick="openMainActivity"
+            />
+
+        <!-- Button for Help -->
+        <Button
+            android:id="@+id/buttonHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/help"
+            android:layout_marginStart="16dp"
+            android:onClick="openHelpActivity"/>
+
+
+    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

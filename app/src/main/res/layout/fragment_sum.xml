@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/sum_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="                       ADDITION of Matrices:\n   The sum of two matrices A and B can be obtained by adding their corresponding elements. The matrices must be of the same dimension.\n\n If A = [a11 a12]\n           [a21 a22]\n and B = [b11 b12]\n               [b21 b22]\n\n Then, A + B =  [a11+b11 a12+b12]\n                          [a21+b21 a22+b22]" />
+
+</ScrollView>

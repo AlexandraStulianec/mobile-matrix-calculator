@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="                          DETERMINANTS\n    The determinant of a square matrix A denoted det(A) or |A| is a scalar value that represents the volumetric scaling factor of the linear transformation described by the matrix. For matrices of size 2x2 the determinant \n\ndet(A) for A = [a b]\n                          [c d]\nis calculated as ad - bc.\n\nFor 3x3 matrices Sarrus' Rule provides a simple method to calculate the determinant. Consider a 3x3 matrix \n\nA = [a1 a2 a3]\n       [b1 b2 b3]\n       [c1 c2 c3].\n\nThe determinant is:\n\n|A| = a1(b2c3 - b3c2) + a2(b3c1 - b1c3) + a3(b1c2 - b2c1).\n\nSarrus' Rule visually involves drawing diagonals from the top row to the bottom right and subtracting the diagonals that go from the bottom to the top left. This method is applicable only to 3x3 matrices." />
+</ScrollView>

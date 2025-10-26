@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="                  TRANSPOSE of a MATRIX\n   The transpose of a matrix swaps its rows with columns. \n\nFor a 2x2 matrix A \n\nif A = [a11 a12]\n          [a21 a22]\n\nthe transpose is A^T = [a11 a21]\n                                        [a12 a22].\n\nConsider a 3x3 matrix A = [a11 a12 a13]\n                                               [a21 a22 a23]\n                                               [a31 a32 a33].\nThe transpose is: A^T = [a11 a21 a31]\n                                          [a12 a22 a32]\n                                          [a13 a23 a33]" />
+</ScrollView>

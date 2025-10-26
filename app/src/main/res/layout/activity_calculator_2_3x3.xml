@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center"
+        tools:context=".CalculatorActivity">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#008080"
+            android:padding="5dp"
+            android:text="CALCULATOR"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <!-- Matrix A Layout -->
+        <TextView
+            android:id="@+id/MatrixA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Matrix A"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:gravity="center"
+            />
+
+        <!-- Matrix A Container -->
+        <FrameLayout
+            android:id="@+id/matrixAContainer"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:id="@+id/layoutMatrixA"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <!-- EditText fields for Matrix A -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/A11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp"
+                        android:maxLength="8"/>
+                    <EditText
+                        android:id="@+id/A12"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp"
+                        android:maxLength="8"/>
+                    <EditText
+                        android:id="@+id/A13"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp"
+                        android:maxLength="8"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/A21"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp"
+                        android:maxLength="8"/>
+                    <EditText
+                        android:id="@+id/A22"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp"
+                        android:maxLength="8"/>
+                    <EditText
+                        android:id="@+id/A23"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp"
+                        android:maxLength="8"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/A31"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp"
+                        android:maxLength="8"/>
+                    <EditText
+                        android:id="@+id/A32"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp"
+                        android:maxLength="8"/>
+                    <EditText
+                        android:id="@+id/A33"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp"
+                        android:maxLength="8"/>
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/buttonMultiplyA"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:text="Multiply with"
+                android:onClick="multiplyMatrixA"/>
+
+            <EditText
+                android:id="@+id/editTextScalarA"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:inputType="numberDecimal"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/transposeA"
+            android:layout_width="175dp"
+            android:layout_height="40dp"
+            android:text="Transpose"
+            android:textSize="14sp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:gravity="center"
+            android:onClick="calculateTransposeA"/>
+
+        <Button
+            android:id="@+id/traceA"
+            android:layout_width="175dp"
+            android:layout_height="40dp"
+            android:text="Trace"
+            android:textSize="14sp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:gravity="center"
+            android:onClick="calculateTraceA"/>
+
+        <Button
+            android:id="@+id/determinantA"
+            android:layout_width="175dp"
+            android:layout_height="40dp"
+            android:text="Determinant"
+            android:textSize="14sp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:gravity="center"
+            android:onClick="calculateDeterminantA"/>
+
+
+        <!-- Space between Matrix A and B -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <!-- Matrix B Layout -->
+        <TextView
+            android:id="@+id/MatrixB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Matrix B"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:gravity="center"
+            />
+
+        <!-- Matrix B Container -->
+        <FrameLayout
+            android:id="@+id/matrixBContainer"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:id="@+id/layoutMatrixB"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <!-- EditText fields for Matrix B -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/B11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp"
+                        android:maxLength="8"/>
+                    <EditText
+                        android:id="@+id/B12"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp"
+                        android:maxLength="8"/>
+                    <EditText
+                        android:id="@+id/B13"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp"
+                        android:maxLength="8"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/B21"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp"
+                        android:maxLength="8"/>
+                    <EditText
+                        android:id="@+id/B22"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp"
+                        android:maxLength="8"/>
+                    <EditText
+                        android:id="@+id/B23"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp"
+                        android:maxLength="8"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/B31"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp"
+                        android:maxLength="8"/>
+                    <EditText
+                        android:id="@+id/B32"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp"
+                        android:maxLength="8"/>
+                    <EditText
+                        android:id="@+id/B33"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp"
+                        android:maxLength="8"/>
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/buttonMultiplyB"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:text="Multiply with"
+                android:onClick="multiplyMatrixB"/>
+
+            <EditText
+                android:id="@+id/editTextScalarB"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:inputType="numberDecimal"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/transposeB"
+            android:layout_width="175dp"
+            android:layout_height="40dp"
+            android:text="Transpose"
+            android:textSize="14sp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:gravity="center"
+            android:onClick="calculateTransposeB"/>
+
+        <Button
+            android:id="@+id/traceB"
+            android:layout_width="175dp"
+            android:layout_height="40dp"
+            android:text="Trace"
+            android:textSize="14sp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:gravity="center"
+            android:onClick="calculateTraceB"/>
+
+        <Button
+            android:id="@+id/determinantB"
+            android:layout_width="175dp"
+            android:layout_height="40dp"
+            android:text="Determinant"
+            android:textSize="14sp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:gravity="center"
+            android:onClick="calculateDeterminantB"/>
+
+
+        <!-- Arithmetic Operations Layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/buttonAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A + B"
+                android:onClick="performAddition"/>
+
+            <Button
+                android:id="@+id/buttonSubtract"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A - B"
+                android:layout_marginStart="16dp"
+                android:onClick="performSubtraction"
+                />
+
+            <Button
+                android:id="@+id/buttonMultiply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A * B"
+                android:layout_marginStart="16dp"
+                android:onClick="performMultiplication"/>
+        </LinearLayout>
+
+        <!-- Buttons for controlling matrix size -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+
+            <Button
+                android:id="@+id/buttonCleanMatrices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clean"
+                android:onClick="cleanMatrices"/>
+
+            <Button
+                android:id="@+id/buttonIncreaseMatrices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:layout_marginStart="16dp"
+                android:onClick="increaseMatrixSize"/>
+
+            <Button
+                android:id="@+id/buttonDecreaseMatrices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:layout_marginStart="16dp"
+                android:onClick="decreaseMatrixSize"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTrace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Result: 0"
+            android:layout_marginTop="16dp"
+            android:textSize="18sp"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+        <!-- Result TextView -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Result Matrix"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/R11"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:background="#E0E0E0"
+                android:padding="8dp"/>
+
+            <TextView
+                android:id="@+id/R12"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:background="#E0E0E0"
+                android:padding="8dp"/>
+
+            <TextView
+                android:id="@+id/R13"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:background="#E0E0E0"
+                android:padding="8dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/R21"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:background="#E0E0E0"
+                android:padding="8dp"/>
+
+            <TextView
+                android:id="@+id/R22"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:background="#E0E0E0"
+                android:padding="8dp"/>
+
+            <TextView
+                android:id="@+id/R23"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:background="#E0E0E0"
+                android:padding="8dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/R31"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:background="#E0E0E0"
+                android:padding="8dp"/>
+
+            <TextView
+                android:id="@+id/R32"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:background="#E0E0E0"
+                android:padding="8dp"/>
+
+            <TextView
+                android:id="@+id/R33"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:background="#E0E0E0"
+                android:padding="8dp"/>
+
+        </LinearLayout>
+
+        <!-- Buttons for navigation -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:paddingTop="16dp">
+
+            <Button
+                android:id="@+id/buttonMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main"
+                android:onClick="openMainActivity"
+                />
+
+            <Button
+                android:id="@+id/buttonQuiz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/quiz"
+                android:layout_marginStart="16dp"
+                android:onClick="openQuizActivity"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

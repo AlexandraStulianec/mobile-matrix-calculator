@@ -1,0 +1,13 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:padding="16dp"
+        android:text="                               Example:\nTo multiply two matrices, we take each row of the first matrix and multiply it by each column of the second matrix, summing the products.\n\nLet's consider matrices A and B:\n           [1, 2, 3]\n   A =  [4, 5, 6]\n           [7, 8, 9]\n\n            [9, 8, 7]\n   B =   [6, 5, 4]\n            [3, 2, 1]\n\nTo compute the first element of AB, multiply the first row of A by the first column of B: (1*9 + 2*6 + 3*3) = 30. Apply this process for each element.\n\nThe result, AB, is:\n\n[30, 24, 18]\n[84, 69, 54]\n[138, 114, 90]\n\n           Scalar Multiplication Example:\nMatrix scalar multiplication involves multiplying each element of a matrix by a scalar.\n\nConsidering matrix A:\n           [1, 2, 3]\n   A =  [4, 5, 6]\n           [7, 8, 9]\n\nand scalar k = 2.\n\nMultiplying each element of A by k, we get:\n\n[2, 4, 6]\n[8, 10, 12]\n[14, 16, 18]" />
+
+</ScrollView>

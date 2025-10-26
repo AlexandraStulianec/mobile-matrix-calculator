@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    tools:context=".Main2Activity">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#008080"
+        android:padding="5dp"
+        android:text="MATRIX CALCULATOR"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewHelloUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp" />
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <Button
+        android:id="@+id/buttonLogIn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Log in to access other features"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/buttonTheory"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Go to Theory"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/buttonExamples"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Go to Examples"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/buttonCalculator"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Go to Calculator"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/buttonQuiz"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Go to Quiz"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/buttonHelp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Go to Help"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/buttonLogOut"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="LogOut"
+        android:layout_marginTop="20dp"
+        android:onClick="logOutUser"/>
+
+</LinearLayout>

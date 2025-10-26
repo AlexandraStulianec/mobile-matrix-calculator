@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="           MULTIPLICATION of Matrices and SCALAR:\n   The product of two matrices, A and B, results in a third matrix C. Each element of C, denoted as Cij, is the sum of the products of the corresponding elements of the ith row of A and the jth column of B.\n       It's important to note that the number of columns in A must equal the number of rows in B to perform multiplication.\n\nLet A = [a11 a12]\n              [a21 a22]\nAnd B = [b11 b12]\n               [b21 b22]\n\nThen, the product AB is:\n   AB = [ (a11*b11 + a12*b21) (a11*b12 + a12*b22) ]\n            [ (a21*b11 + a22*b21) (a21*b12 + a22*b22) ]\n\n        We also have scalar mutiplication which refers to the multiplication of each term of a matrix with a scalar term.\n        If a scalar let’s have ‘k’ is multiplied by a matrix then the equivalent matrix will contain elements equal to the product of the scalar and the element of the original matrix." />
+</ScrollView>

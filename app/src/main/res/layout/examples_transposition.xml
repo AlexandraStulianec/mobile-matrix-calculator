@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:padding="16dp"
+        android:text="                             Example:\nTransposing a matrix swaps its rows and columns.\n\nFor matrix A:\nA = [1, 2, 3]\n       [4, 5, 6]\n       [7, 8, 9]\n\nTranspose of A, denoted A^T, rearranges A as follows:\nA^T = [1, 4, 7]\n           [2, 5, 8]\n           [3, 6, 9]\n\nHere, the first row of A becomes the first column of A^T, and so on." />
+
+</ScrollView>

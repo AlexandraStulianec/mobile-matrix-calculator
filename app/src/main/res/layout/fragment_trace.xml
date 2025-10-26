@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="                         TRACE of Matrices:\n     The trace of a square matrix A, denoted as tr(A), is the sum of the elements on the main diagonal (from the top left to the bottom right).\n\n   If A = [a11 a12]\n             [a21 a22]\n\n  Then, tr(A) = a11 + a22\n\n  Consider a 3x3 matrix A =   [a11 a12 a13]\n                                                   [a21 a22 a23]\n                                                   [a31 a32 a33].\n\n  The trace is: tr(A)= a11 + a22 + a33" />
+</ScrollView>
